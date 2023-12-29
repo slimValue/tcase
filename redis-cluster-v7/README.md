@@ -25,3 +25,27 @@ https://help.aliyun.com/zh/redis/support/common-errors-and-troubleshooting#redis
 
 
 
+## 附录工具
+
+### go 模块依赖
+
+这里介绍个工具 gmchart，找出直接依赖
+
+
+进入工作项目
+
+`cd xxx`
+
+安装 gmchart
+
+`go install github.com/PaulXu-cn/go-mod-graph-chart/gmchart@latest`
+
+
+运行
+
+`go mod graph | gmchart`
+
+
+```
+go mod graph 是官方工具命令。 可展示出了该项目所有的依赖关系，只不过是文本形式展示，输出的内容多了，人眼看不出啥来。这里借用 gmchart 工具，可以将其依赖关系组织为 树状 渲染 web 页面，也就是和 go 工具一样，跨平台的。
+```
